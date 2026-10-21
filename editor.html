@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Advanced Passport Photo Editor - Professional Photo Editing Tools | Free Online Editor</title>
+    <meta name="title" content="Advanced Passport Photo Editor - Professional Photo Editing Tools | Free Online Editor">
+    <meta name="description" content="Professional passport photo editor with advanced tools. Crop, adjust brightness, contrast, saturation & more. Free forever, works offline. Create perfect passport photos for USA, India, UK, Canada & 50+ countries.">
+    <meta name="keywords" content="passport photo editor, photo editor online free, crop passport photo, adjust passport photo, professional photo editor, passport photo crop tool, brightness adjustment, contrast tool, saturation editor, photo enhancement, visa photo editor, id photo editor">
+    <meta name="author" content="Rizwan Soaib">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rizwansoaib.github.io/passport-photo-generator/editor.html">
+    <meta property="og:title" content="Advanced Passport Photo Editor - Professional Editing Tools">
+    <meta property="og:description" content="Edit passport photos like a pro! Crop, adjust, enhance with 6 professional tools. Free, offline, privacy-first photo editor.">
+    <meta property="og:image" content="https://rizwansoaib.github.io/passport-photo-generator/og-image-editor.jpg">
+    <meta property="og:site_name" content="Passport Photo Generator">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rizwansoaib.github.io/passport-photo-generator/editor.html">
+    <meta name="twitter:title" content="Advanced Passport Photo Editor - Free Professional Tools">
+    <meta name="twitter:description" content="Professional passport photo editor with crop, brightness, contrast, saturation & more. Free forever!">
+    <meta name="twitter:image" content="https://rizwansoaib.github.io/passport-photo-generator/twitter-image-editor.jpg">
+    <meta name="twitter:creator" content="@rizwansoaib">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rizwansoaib.github.io/passport-photo-generator/editor.html">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='50' dominant-baseline='middle' text-anchor='middle' font-size='55' fill='white'%3E📸%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='180' height='180' rx='40' fill='url(%23grad)'/%3E%3Ctext x='90' y='90' dominant-baseline='middle' text-anchor='middle' font-size='90' fill='white'%3E📸%3C/text%3E%3C/svg%3E">
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
+    <link rel="stylesheet" href="css/camera-studio.css">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Advanced Passport Photo Editor",
+      "applicationCategory": "PhotographyApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Professional Crop Tool",
+        "Brightness Adjustment",
+        "Contrast Control",
+        "Saturation Editor",
+        "Exposure Control",
+        "Sharpness Tool",
+        "Blur Effect",
+        "Auto Enhance",
+        "Live Preview",
+        "300 DPI Export"
+      ]
+    }
+    </script>
+    
+    <!-- Humans.txt -->
+    <link type="text/plain" rel="author" href="humans.txt">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="app-loader" id="appLoader">
+        <div class="loader-content">
+            <div class="loader-icon">📸</div>
+            <h2 class="loader-title">Advanced Photo Editor</h2>
+            <p class="loader-subtitle">Loading professional editing tools...</p>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Install Prompt -->
+    <div class="install-prompt" id="installPrompt">
+        <button class="install-close" id="installClose">×</button>
+        <div class="install-prompt-content">
+            <div class="install-icon">📱</div>
+            <div class="install-text">
+                <div class="install-title">Install App</div>
+                <div class="install-description">Add to home screen for quick access & offline use!</div>
+            </div>
+        </div>
+        <div class="install-actions">
+            <button class="install-btn install-btn-primary" id="installButton">Install Now</button>
+            <button class="install-btn install-btn-secondary" id="installLater">Maybe Later</button>
+        </div>
+    </div>
+
+    <div class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+        <span class="theme-icon">🌙</span>
+    </div>
+    <div class="language-switcher">
+        <label for="languageSelect" data-i18n="languageLabel" style="margin-right: 6px;">🌐 Language</label>
+        <select id="languageSelect">
+            <option value="en">🇬🇧 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="hi">🇮🇳 हिन्दी</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="pt">🇵🇹 Português</option>
+        </select>
+    </div>
+    <div class="container">
+        <h1 data-i18n="editorTitle">Passport Photo Editor</h1>
+        
+        <!-- Header Info -->
+        <div class="app-header">
+            <div class="header-badges">
+                <span class="badge badge-primary">🔒 100% Offline</span>
+                <span class="badge badge-success">✨ Free Forever</span>
+                <span class="badge badge-info">🚀 No Sign-up Required</span>
+                <span class="badge badge-warning">🔓 Open Source</span>
+                <span class="badge badge-secure">🛡️ Privacy First</span>
+                <span class="badge badge-fast">⚡ Instant Processing</span>
+            </div>
+            <p class="header-description" data-i18n="editorHeaderDescription">
+                Professional photo editor with advanced tools • Crop, adjust & enhance • Works entirely offline
+            </p>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="editor-nav">
+            <a href="index.html" class="nav-link" data-i18n="simpleModeLink">← Simple Mode</a>
+            <span class="nav-title" data-i18n="advancedEditorNavTitle">Advanced Editor</span>
+        </div>
+
+        <div class="editor-grid">
+            <!-- Left Panel - Controls -->
+            <div class="editor-controls">
+                
+                <!-- Upload Section -->
+                <div class="card">
+                    <h3 class="card-title" data-i18n="uploadPhotoTitle">📤 Upload Photo</h3>
+                    <input type="file" id="photoUpload" accept="image/*" />
+                    <button type="button" id="openCameraBtn" class="btn-secondary camera-btn-open" data-i18n="useCameraBtn" aria-label="Open Live AI Camera Studio to capture your passport photo with your webcam">📷 Use Live Camera Studio</button>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;" data-i18n="cameraPrivacyNote">🔒 Camera photos are processed locally — never uploaded.</p>
+                </div>
+
+                <!-- Background (AI removal + color) -->
+                <div class="card" id="backgroundCard" style="display: none;">
+                    <h3 class="card-title" data-i18n="backgroundTitle">🖼️ Background</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="removeBgToggle" />
+                        <span data-i18n="removeBgLabel">✂️ Remove Background (AI)</span>
+                    </label>
+                    <p id="bgRemovalStatus" class="hint-text" style="display: none;"></p>
+                    <div class="bg-color-swatches">
+                        <button type="button" class="bg-swatch active" data-color="#ffffff" style="background:#ffffff" title="White"></button>
+                        <button type="button" class="bg-swatch" data-color="#1e88e5" style="background:#1e88e5" title="Blue"></button>
+                        <button type="button" class="bg-swatch" data-color="#d32f2f" style="background:#d32f2f" title="Red"></button>
+                        <button type="button" class="bg-swatch" data-color="#e0e0e0" style="background:#e0e0e0" title="Grey"></button>
+                        <input type="color" id="customBgColor" value="#ffffff" title="Custom color" />
+                    </div>
+                </div>
+
+                <!-- Virtual Suit Changer -->
+                <div class="card" id="suitCard" style="display: none;">
+                    <h3 class="card-title" data-i18n="suitTitle">👔 Virtual Suit Changer</h3>
+                    <p class="hint-text" data-i18n="suitHint">Swap casual clothes for a formal suit or blazer — perfect for passport, visa &amp; ID photos.</p>
+                    <div class="suit-options">
+                        <button type="button" class="suit-option active" data-suit="none">
+                            <span class="suit-swatch suit-swatch-none">🚫</span>
+                            <span data-i18n="suitNone">None</span>
+                        </button>
+                        <button type="button" class="suit-option" data-suit="blackSuit">
+                            <span class="suit-swatch" style="background:#1a1a1a"></span>
+                            <span data-i18n="suitBlack">Black Suit</span>
+                        </button>
+                        <button type="button" class="suit-option" data-suit="navySuit">
+                            <span class="suit-swatch" style="background:#1c2b4a"></span>
+                            <span data-i18n="suitNavy">Navy Suit</span>
+                        </button>
+                        <button type="button" class="suit-option" data-suit="greyBlazer">
+                            <span class="suit-swatch" style="background:#5b5f66"></span>
+                            <span data-i18n="suitGrey">Grey Blazer</span>
+                        </button>
+                        <button type="button" class="suit-option" data-suit="maroonBlazer">
+                            <span class="suit-swatch" style="background:#5e2129"></span>
+                            <span data-i18n="suitMaroon">Women's Blazer</span>
+                        </button>
+                        <button type="button" class="suit-option" data-suit="blouse">
+                            <span class="suit-swatch" style="background:#e7e2da"></span>
+                            <span data-i18n="suitBlouse">Formal Blouse</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image Adjustments -->
+                <div class="card" id="adjustmentsCard" style="display: none;">
+                    <h3 class="card-title" data-i18n="adjustmentsTitle">🎨 Adjustments</h3>
+                    
+                    <div class="slider-group">
+                        <label>
+                            <span>Brightness</span>
+                            <span id="brightnessValue">0</span>
+                        </label>
+                        <input type="range" id="brightness" min="-100" max="100" value="0" />
+                    </div>
+
+                    <div class="slider-group">
+                        <label>
+                            <span>Contrast</span>
+                            <span id="contrastValue">100</span>
+                        </label>
+                        <input type="range" id="contrast" min="0" max="200" value="100" />
+                    </div>
+
+                    <div class="slider-group">
+                        <label>
+                            <span>Saturation</span>
+                            <span id="saturationValue">100</span>
+                        </label>
+                        <input type="range" id="saturation" min="0" max="200" value="100" />
+                    </div>
+
+                    <div class="slider-group">
+                        <label>
+                            <span>Exposure</span>
+                            <span id="exposureValue">0</span>
+                        </label>
+                        <input type="range" id="exposure" min="-100" max="100" value="0" />
+                    </div>
+
+                    <div class="slider-group">
+                        <label>
+                            <span>Sharpness</span>
+                            <span id="sharpnessValue">0</span>
+                        </label>
+                        <input type="range" id="sharpness" min="0" max="100" value="0" />
+                    </div>
+
+                    <div class="slider-group">
+                        <label>
+                            <span>Blur</span>
+                            <span id="blurValue">0</span>
+                        </label>
+                        <input type="range" id="blur" min="0" max="20" value="0" />
+                    </div>
+
+                    <div class="adjustment-buttons">
+                        <button id="autoEnhance" class="btn-secondary">✨ Auto Enhance</button>
+                        <button id="resetAdjustments" class="btn-outline">🔄 Reset All</button>
+                    </div>
+
+                    <h4 style="margin: 20px 0 10px 0; font-size: 15px; color: var(--text-primary);" data-i18n="filtersTitle">🎞️ Filters &amp; Effects</h4>
+                    <div class="filter-presets">
+                        <button type="button" class="filter-btn active" data-filter="none">None</button>
+                        <button type="button" class="filter-btn" data-filter="grayscale">Grayscale</button>
+                        <button type="button" class="filter-btn" data-filter="sepia">Sepia</button>
+                        <button type="button" class="filter-btn" data-filter="vintage">Vintage</button>
+                        <button type="button" class="filter-btn" data-filter="cool">Cool</button>
+                        <button type="button" class="filter-btn" data-filter="warm">Warm</button>
+                        <button type="button" class="filter-btn" data-filter="vivid">Vivid</button>
+                    </div>
+                    <label class="checkbox-label" style="margin-top: 10px;">
+                        <input type="checkbox" id="vignetteToggle" />
+                        <span>🕶️ Vignette</span>
+                    </label>
+                </div>
+
+                <!-- Batch Processing -->
+                <div class="card" id="batchCard" style="display: none;">
+                    <h3 class="card-title" data-i18n="batchTitle">📦 Batch Processing</h3>
+                    <p class="hint-text" data-i18n="batchHint">Apply the current adjustments, background &amp; filters to multiple photos at once.</p>
+                    <input type="file" id="batchUpload" accept="image/*" multiple />
+                    <div id="batchList" class="batch-list"></div>
+                    <div class="adjustment-buttons">
+                        <button id="processBatch" class="btn-primary" disabled data-i18n="processBatchBtn">⚙️ Process Batch</button>
+                    </div>
+                    <div id="batchProgress" class="hint-text"></div>
+                    <div class="adjustment-buttons">
+                        <button id="downloadBatchZip" class="btn-secondary" style="display: none;" data-i18n="downloadZipBtn">📥 Download All (ZIP)</button>
+                        <button id="downloadBatchPDF" class="btn-secondary" style="display: none;" data-i18n="downloadBatchPdfBtn">📥 Download All (PDF)</button>
+                    </div>
+                </div>
+
+                <!-- Photo Size Selection (shows after Generate A4) -->
+                <div class="card" id="sizeSelectionCard" style="display: none;">
+                    <h3 class="card-title">📐 Photo Size</h3>
+                    
+                    <div class="size-options">
+                        <label>
+                            <input type="radio" name="photoSize" value="india" checked />
+                            <span>India/UK (35×45mm)</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="photoSize" value="usa" />
+                            <span>USA (51×51mm)</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="photoSize" value="canada" />
+                            <span>Canada (50×70mm)</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="photoSize" value="schengen" />
+                            <span>Schengen (35×45mm)</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="photoSize" value="china" />
+                            <span>China (33×48mm)</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="photoSize" value="custom" />
+                            <span>Custom Size</span>
+                        </label>
+                    </div>
+
+                    <div id="customSizeInputs" style="display: none; margin-top: 15px;">
+                        <div class="input-group">
+                            <label>Width (mm):</label>
+                            <input type="number" id="customWidth" min="20" max="100" value="35" />
+                        </div>
+                        <div class="input-group">
+                            <label>Height (mm):</label>
+                            <input type="number" id="customHeight" min="20" max="150" value="45" />
+                        </div>
+                    </div>
+
+                    <div class="photo-count-section">
+                        <h4 style="margin: 20px 0 10px 0; font-size: 15px; color: var(--text-primary);">Number of Photos</h4>
+                        <div class="slider-group">
+                            <label>
+                                <span>Photos on Sheet</span>
+                                <span id="photoCountValue">Maximum</span>
+                            </label>
+                            <input type="range" id="photoCountSlider" min="1" max="50" value="50" />
+                        </div>
+                        <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
+                            Slide to limit photos or keep at maximum to fill the sheet
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Panel - Preview -->
+            <div class="editor-preview">
+                
+                <!-- Upload Zone -->
+                <div id="uploadZone" class="upload-zone">
+                    <div class="upload-content">
+                        <div class="upload-icon">📷</div>
+                        <h3>Upload Your Photo</h3>
+                        <p>Click to browse or drag & drop</p>
+                        <p class="upload-hint">Supports: JPG, PNG, WEBP (Max 10MB)</p>
+                    </div>
+                </div>
+
+                <!-- Crop Area -->
+                <div id="cropArea" class="crop-area" style="display: none;">
+                    <h3>Crop Your Photo</h3>
+                    <div class="crop-container">
+                        <img id="cropImage" alt="Crop preview" />
+                    </div>
+                    
+                    <!-- Crop Tools (Horizontal) -->
+                    <div class="crop-tools-horizontal" id="cropToolsCard" style="display: none;">
+                        <div class="tool-buttons-horizontal">
+                            <button id="rotateLeft" class="tool-btn">↺ Rotate Left</button>
+                            <button id="rotateRight" class="tool-btn">↻ Rotate Right</button>
+                            <button id="flipH" class="tool-btn">⇄ Flip H</button>
+                            <button id="flipV" class="tool-btn">⇅ Flip V</button>
+                            <button id="resetCrop" class="tool-btn">🔄 Reset</button>
+                        </div>
+                        <div class="crop-action-buttons">
+                            <button id="noCrop" class="btn-outline">⏭ Skip Crop</button>
+                            <button id="applyCrop" class="btn-apply">✓ Apply Crop</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview Canvas -->
+                <div id="previewArea" class="preview-area" style="display: none;">
+                    <h3 data-i18n="previewLabel">Preview</h3>
+                    <canvas id="previewCanvas"></canvas>
+
+                    <!-- Before/After Comparison -->
+                    <div id="compareContainer" class="compare-container" style="display: none;">
+                        <div class="compare-slider-wrap">
+                            <img id="compareAfter" class="compare-img" alt="After editing" />
+                            <div id="compareBeforeWrap" class="compare-before-wrap">
+                                <img id="compareBefore" class="compare-img" alt="Before editing" />
+                            </div>
+                            <input type="range" id="compareRange" min="0" max="100" value="50" class="compare-range" />
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="backToCrop" class="btn-outline">← Back to Crop</button>
+                        <button id="toggleCompare" class="btn-outline" data-i18n="compareBtn">🔍 Before/After</button>
+                        <button id="downloadSingle" class="btn-secondary">📥 Download Single</button>
+                        <button id="generateA4" class="btn-primary">📄 Generate A4</button>
+                    </div>
+                </div>
+
+                <!-- A4 Preview -->
+                <div id="a4Area" class="a4-area" style="display: none;">
+                    <h3>A4 Layout (300 DPI)</h3>
+                    <div class="a4-container">
+                        <canvas id="a4Canvas"></canvas>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="printA4" class="print-btn">
+                            <span class="print-icon">🖨️</span> Print
+                        </button>
+                        <button id="downloadPDF" class="btn-primary">📥 Download PDF</button>
+                        <button id="downloadJPG" class="btn-secondary">📥 Download JPG</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-item">
+                <span class="footer-icon">🔒</span>
+                <span>Works Offline • No Data Saved</span>
+            </div>
+            <div class="footer-item">
+                <span>Made with ❤️ in India</span>
+            </div>
+            <div class="footer-item">
+                <a href="https://github.com/rizwansoaib" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <span class="footer-icon">👨‍💻</span>
+                    <span>Developer: @rizwansoaib</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/vendor/jszip.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/faceDetect.js"></script>
+    <script src="js/backgroundRemoval.js"></script>
+    <script src="js/cameraStudio.js"></script>
+    <script src="js/editor.js"></script>
+</body>
+</html>
